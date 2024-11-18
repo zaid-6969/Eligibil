@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            background: url(/download.gif);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .main {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            width: 30%;
+            height: 50vh;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(./bg.jpg);
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(5px);
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+
+        .title {
+            font-size: 3rem;
+            color: rgb(7, 7, 7);
+            font-weight: 600;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        #age {
+            width: 50%;
+            height: 30px;
+            border-radius: 5px;
+            border: 2px solid black;
+            padding: 5px;
+        }
+
+        #btn {
+            width: 25%;
+            height: 30px;
+            border-radius: 5px;
+            border: 2px solid black;
+            padding: 5px;
+        }
+
+        .title-2 {
+            font-size: 25px;
+            color: rgb(7, 7, 7);
+            font-weight: 600;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+    </style>
+
+    <div class="main">
+        <h1 class="title">Watch 'R'rated Animes</h1>
+        <div class="container">
+            <p class="title-2">Enter Your Age</p>
+            <input type="number" id="age" placeholder="Enter Your Age"><br>
+            <button id="btn">Submit</button>
+        </div>
+    </div>
+
+    <script>
+        const btn = document.getElementById('btn');
+        const age = document.getElementById('age');
+        btn.addEventListener('click', () => {
+            if (age.value >= 18) {
+                alert('You Are Eligible To Watch')
+            } else {
+                alert('You Are Not Eligible To Watch')
+            }
+        })
+    </script>
+</body>
+
+</html>
